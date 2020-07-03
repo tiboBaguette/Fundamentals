@@ -27,5 +27,7 @@ public class Application {
         spaarRekening.yearlyIntrest(currentYear);
         System.out.println(spaarRekening.toString());
 
+        zichtRekening.withdrawMoney(5000);
+
     }
 }

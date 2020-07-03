@@ -11,6 +11,13 @@ public class ZichtRekening extends Rekening {
     }
 
     public void withdrawMoney(double money) {
+        try {
+            if (this.totalMoney < money) {
+                throw new NotEnoughMoneyException("Withdraw amount is higher than bank total");
+            }
+        } catch (NotEnoughMoneyException noMoreIceCreamException) {
+            System.out.println(noMoreIceCreamException.toString());
+        }
         this.totalMoney = totalMoney - money;
     }
 
